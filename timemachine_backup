@@ -45,7 +45,7 @@ shift $((OPTIND -1))
 
 declare -A clients ssh_keys backup_bases
 [ -r $config_file ] && source $config_file
-[ ${#client[@]} = 0 ] && echo "Error: You must define clients in $config_file" && echo && usage 1
+[ ${#clients[@]} = 0 ] && echo "Error: You must define clients in $config_file" && echo && usage 1
 [ -z "${ssh_keys[%]}" ] && echo "Error: You must define at least ssh_keys[%] in $config_file" && echo && usage 1
 [ -z "${backup_bases[%]}" ] && echo "Error: You must define at least backup_bases[%] in $config_file" && echo && usage 1
 
