@@ -61,18 +61,18 @@ case "${clients[$1]}" in
   default)
     backup_dest=$backup_base/$1
     backup_source=$1
-    list_cmd="env SSH_AUTH_SOCK=/dev/null ssh -i /root/.ssh/backup $1 "
+    list_cmd="env SSH_AUTH_SOCK=/dev/null ssh -i $ssh_key $1 "
     remote=true
-    ssh_cmd="env SSH_AUTH_SOCK=/dev/null ssh -i /root/.ssh/backup -l root"
+    ssh_cmd="env SSH_AUTH_SOCK=/dev/null ssh -i $ssh_key -l root"
     ssh_string=(-e "$ssh_cmd")
     ssh_user="$1:"
     ;;
   mac)
     backup_dest=$backup_base/$1
     backup_source=$1
-    list_cmd="env SSH_AUTH_SOCK=/dev/null ssh -i /root/.ssh/backup $1 "
+    list_cmd="env SSH_AUTH_SOCK=/dev/null ssh -i $ssh_key $1 "
     remote=true
-    ssh_cmd="env SSH_AUTH_SOCK=/dev/null ssh -i /root/.ssh/backup -l root"
+    ssh_cmd="env SSH_AUTH_SOCK=/dev/null ssh -i $ssh_key -l root"
     ssh_string=(-e "$ssh_cmd")
     ssh_user="$1:"
     xarg=""
