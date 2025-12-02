@@ -1,0 +1,15 @@
+# Date format: YYYY-mm-dd_HH-MM-SS
+date_format="+%Y-%m-%d_%H-%M-%S"
+
+# Config types: default, mac, local
+clients[backupserver]=local
+clients[macbookpro]=mac
+clients[unixserver1]=default
+clients[unixserver2]=default
+
+ssh_keys[%]=/root/.ssh/backup
+
+# Backup Directory
+backup_bases[%]=/ext/Backups
+backup_bases[unixserver1]=/ext/Backups2
+
