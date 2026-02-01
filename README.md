@@ -1,5 +1,17 @@
 # timemachine backup
 
+## Repository Info
+
+- Repository home: https://git.erdelynet.com/mike/timemachine
+- Github Mirror: https://github.com/merdely/timemachine
+
+## Issues / Pull Requests
+
+Issues and other interactions should take place in the Github Mirror
+
+- https://github.com/merdely/timemachine/issues
+- https://github.com/merdely/timemachine/pulls
+
 ## Background
 
 **timemachine backup** uses rsync to create backups. It uses rsync's
